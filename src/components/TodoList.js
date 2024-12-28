@@ -52,8 +52,18 @@ function TodoList() {
           />
         ))}
       </div>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={() => addTask(text)}>Add Task</button>
+      <div className="input-group">
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Add a new task..."
+          className="form-control"
+        />
+        <button onClick={addTask} className="btn btn-primary">
+          Add Task
+        </button>
+      </div>
     </div>
   );
 }
